@@ -63,6 +63,9 @@ public class Add3 extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		System.out.println("doPost 여기 왔네 ");
+		System.out.println("doPost 여기 왔네 ");
+		System.out.println("doPost 여기 왔네 ");
+		System.out.println("doPost 여기 왔네 ");
 		//Encoding 적용 - > browser로 보내기 전에 해야함
 		request.setCharacterEncoding("utf-8");// request에 실려있는 한글 데이터를 인코딩해서 정상적으로 받을 수 있또록 해줌, Parameter를 받기 전에 해야한다.
 		int num = Integer.parseInt(request.getParameter("num"));  //클라이언트에서 text형태로 넘어왔기 때문에 int형으로 변경해야한다.
