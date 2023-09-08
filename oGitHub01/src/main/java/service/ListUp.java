@@ -25,10 +25,17 @@ public class ListUp implements BaseOfService {
 		
 		
 		
-		try {
+		try {	// tc = 47 1 10 
+				// tc = 47 
 			int totCnt = bd.getTotCnt();
 			int pageSize = 10, blockSize = 10;
-//			int startPage = totCnt-
+			int startRow = (currentPage-1)*pageSize+1;
+			int endRow = startRow+pageSize-1;
+			if(pageSize*currentPage>totCnt) endRow = totCnt-pageSize*(currentPage-1);
+			int startNum = totCnt-startRow+1;
+			//  14 = 11 
+			int startPage = (currentPage-1)/blockSize*blockSize+1;
+			int endPage = startPage+blockSize-1;
 //			List<Board> boardList =  bd.boardList();
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
